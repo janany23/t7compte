@@ -1,0 +1,14 @@
+app-dir: /home/silca/Code/Compte  
+name: CloudBank
+buildpack: https://github.com/cloudfoundry/php-buildpack#v3.1.0
+instances: 1
+memory: 256
+services:
+  ${name}-db:
+    type: mysql
+hooks:
+  post-staging:
+  # setting up in filesystem
+  - sh vendor/bin/doctrine orm:schema-tool:create
+timeout: 180
+disk_quota: 2048

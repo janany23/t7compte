@@ -1,0 +1,7 @@
+{
+	"WEB_SERVER": "nginx",
+    "PHP_MODULES": [],
+    "PHP_EXTENSIONS": ["bz2", "zlib", "curl", "mcrypt", "pdo", "pdo_mysql"],
+    "HTTP_PROXY": "192.168.0.51:3128",
+    "HTTPS_PROXY": "192.168.0.51:3128"
+}
